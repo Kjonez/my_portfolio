@@ -1,0 +1,105 @@
+body {
+    direction: ltr;
+}
+.name, .title {
+    text-shadow: 2px 2px 2px black
+}
+.name {
+    bottom: 90px;
+}
+.title {
+    bottom: 140px;
+    opacity: 1;
+}
+/*start portfolio*/
+.portfolioLi {
+    list-style: none;
+    margin: auto;
+}
+.portfolioUl {
+    padding: 0;
+}
+.portfolioDescr {
+    letter-spacing: 1.5px;
+    height: 11vh;
+    color: #000;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    color: #a3a3a3;
+}
+.work-img{
+     border: 1px solid black;
+}
+.portfolioLogo {
+    text-decoration: none !important;
+}
+
+/*end portfolio*/
+
+.service-icons {
+    height: 33%;
+    width: 33%;
+}
+.service-icons-firebase {
+    height: 25%;
+    width: 23%;
+}
+.service-icons-material {
+    height: 33%;
+    width: 40%;
+}
+.service-icons-redux {
+    height: 33%;
+    width: 35%;
+}
+.page-section {
+    padding-bottom: 140px !important;
+}
+.aboutJosh {
+    float: left;
+}
+.active {
+    color: inherit;
+}
+.works-grid.hide-titles .work-item .work-intro{
+    bottom: -30px;
+}
+.logo {
+    max-width: 200px;
+}
+@media (max-width: 1550px) {
+    .name {
+        bottom: 130px;
+    }
+    .title {
+        bottom: 170px;
+    }
+}
+@media (max-width: 767px) {
+    .team-item-image {
+        width: 254px;
+        margin: auto;
+    }
+    .title {
+        bottom: 120px;
+    }
+    .cf-left-col{
+        margin-left: 0;
+    }
+    .works-grid.hide-titles .work-item .work-intro{
+        bottom: -70px;
+    }
+}
+@media (max-width: 480px) {
+    .name {
+        bottom: 130px;
+    }
+    .title {
+        bottom: 140px;
+    }
+}
+@media (max-width: 350px) {
+    .hs-line-1 {
+        letter-spacing: 10px;
+    }
+}
