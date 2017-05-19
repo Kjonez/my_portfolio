@@ -2,7 +2,7 @@
 require_once('email_config.php');
 require('phpmailer/PHPMailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
-$mail->SMTPDebug = 3;                                 // Enable verbose debug output
+$mail->SMTPDebug = 0;                                 // Enable verbose debug output
 
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
@@ -32,7 +32,7 @@ $mail->addReplyTo($_POST['email']);/*email address of the person sending the mes
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-$mail->Subject = $_POST['name'];
+$mail->Subject = $_POST['name'].'from joshuahuber';
 $mail->Body    = $_POST['message'];
 $mail->AltBody = htmlentities($_POST['message']);
 

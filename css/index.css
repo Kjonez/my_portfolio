@@ -67,6 +67,11 @@ body {
 .logo {
     max-width: 200px;
 }
+/*start form*/
+.messages {
+    width: 97%;
+}
+/*end form*/
 @media (max-width: 1550px) {
     .name {
         bottom: 130px;

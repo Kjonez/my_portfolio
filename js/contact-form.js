@@ -42,18 +42,19 @@ $(document).ready(function(){
                 url: url,
                 data: $(this).closest('form').serialize(), // serializes the form's elements.
                 success: function (data) {
-                    $('.formSubmit').closest('form').find('input[type=text], textarea').val('');
+                    $('#contact_form').closest('form').find('input[type=text], textarea').val('');
+                    $('#contact_form').closest('form').find('input[type=email], textarea').val('');
                     var messageAlert = 'alert-success';
                     var messageText = 'Success, information was sent';
-                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable animated bounceIn"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
                     if (messageAlert && messageText) {
-                        $('#contact-form').find('.messages').html(alertBox);
+                        $('.messages').append($(alertBox));
                     }
                 },
                 error: function(response){
                     var messageAlert = 'alert-danger';
                     var messageText = 'Failure, information was not sent';
-                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable animated bounceIn"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
                     if (messageAlert && messageText) {
                         $('#contact-form').find('.messages').html(alertBox);
                     }
