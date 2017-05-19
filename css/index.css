@@ -1,15 +1,23 @@
 body {
     direction: ltr;
 }
+.logo{
+    font-size: 16px;
+}
 .name, .title {
     text-shadow: 2px 2px 2px black
 }
-.name {
-    bottom: 90px;
+.mb-80 {
+     margin-bottom: 39px;
+}
+.home-content {
+    height: 65%;
 }
 .title {
-    bottom: 140px;
     opacity: 1;
+}
+.aboutMe{
+    color: black;
 }
 /*start portfolio*/
 .portfolioLi {
@@ -67,21 +75,31 @@ body {
 .logo {
     max-width: 200px;
 }
-@media (max-width: 1550px) {
-    .name {
-        bottom: 130px;
-    }
-    .title {
-        bottom: 170px;
-    }
+/*start form*/
+.messageNotSent, .messageSent {
+    width: 207px;
+    float: right;
+    margin-top: 10px;
+    height: 37px;
+    border: 1px solid green;
+    text-align: center;
+    border-radius: 4px;
+    line-height: 32px;
 }
+.messageSent {
+    color: green;
+    border: 1px solid green;
+}
+.messageNotSent {
+    color: green;
+    border: 1px solid green;
+}
+/*end form*/
+
 @media (max-width: 767px) {
     .team-item-image {
         width: 254px;
         margin: auto;
-    }
-    .title {
-        bottom: 120px;
     }
     .cf-left-col{
         margin-left: 0;
@@ -91,11 +109,8 @@ body {
     }
 }
 @media (max-width: 480px) {
-    .name {
-        bottom: 130px;
-    }
-    .title {
-        bottom: 140px;
+    .mb-80 {
+         margin-bottom: 20px;
     }
 }
 @media (max-width: 350px) {

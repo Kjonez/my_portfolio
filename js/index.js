@@ -16,9 +16,9 @@ function email(){
     $('.email ').attr('href', e);
 }
 function phone(){
-    var p = '310';
-    p += '-780';
-    p += '-4602';
+    var p = '323';
+    p += '-905';
+    p += '-4712';
     $('.phone').text(p);
 }
 function closeNav(){
