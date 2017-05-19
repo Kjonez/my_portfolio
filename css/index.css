@@ -68,8 +68,23 @@ body {
     max-width: 200px;
 }
 /*start form*/
-.messages {
-    width: 97%;
+.messageNotSent, .messageSent {
+    width: 207px;
+    float: right;
+    margin-top: 10px;
+    height: 37px;
+    border: 1px solid green;
+    text-align: center;
+    border-radius: 4px;
+    line-height: 32px;
+}
+.messageSent {
+    color: green;
+    border: 1px solid green;
+}
+.messageNotSent {
+    color: green;
+    border: 1px solid green;
 }
 /*end form*/
 @media (max-width: 1550px) {

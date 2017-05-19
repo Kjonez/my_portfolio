@@ -26,6 +26,12 @@ $(document).ready(function(){
             $('textarea[name=message]').css('border-color', '#e41919');
             proceed = false;
         }
+        var atpos = user_email.indexOf("@");
+        var dotpos = user_email.lastIndexOf(".");
+        if (atpos<1 || dotpos<atpos+2 || dotpos+2>=user_email.length) {
+            $('input[name=email]').css('border-color', '#e41919');
+            proceed = false;
+        }
 
         //everything looks good! proceed...
         if (proceed) {
@@ -44,20 +50,12 @@ $(document).ready(function(){
                 success: function (data) {
                     $('#contact_form').closest('form').find('input[type=text], textarea').val('');
                     $('#contact_form').closest('form').find('input[type=email], textarea').val('');
-                    var messageAlert = 'alert-success';
-                    var messageText = 'Success, information was sent';
-                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-                    if (messageAlert && messageText) {
-                        $('.messages').append($(alertBox));
-                    }
+                    var alertBox = "<div class='messageSent'>Message Sent</div>";
+                    $('.messages').append($(alertBox));
                 },
                 error: function(response){
-                    var messageAlert = 'alert-danger';
-                    var messageText = 'Failure, information was not sent';
-                    var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
-                    if (messageAlert && messageText) {
-                        $('#contact-form').find('.messages').html(alertBox);
-                    }
+                    var alertBox = "<div class='messageNotSent'>Please Try Again</div>";
+                    $('.messages').append($(alertBox));
                 }
             });
         }
