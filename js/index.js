@@ -32,3 +32,6 @@ function closeNav(){
         }
     });
 }
+function portfolioClick(){
+    
+}
