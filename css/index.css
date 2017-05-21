@@ -37,6 +37,7 @@ body {
 }
 .work-img{
      border: 1px solid black;
+     cursor: pointer;
 }
 .portfolioLogo {
     text-decoration: none !important;
