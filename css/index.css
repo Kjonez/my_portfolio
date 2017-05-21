@@ -50,7 +50,7 @@ body {
     -ms-transform: scale(1.05);
     transform: scale(1.05);
     background: #e41919;
-    opacity: .25;
+    opacity: .1;
 }
 .clickColor {
     color: #000;
