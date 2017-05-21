@@ -4,6 +4,7 @@ function init(){
     email();
     phone();
     closeNav();
+    $('.mfp-image').click(portfolioClick);
 }
 function email(){
     var e = 'josh';
@@ -33,5 +34,14 @@ function closeNav(){
     });
 }
 function portfolioClick(){
-    
+    console.log('clicked: ', $(this).parent(), this)
+    var workItem = $(this).parent();
+    var mfpImage = this;
+    var image = $(this).find("img");
+    var workImg = $(this).find(".work-img");
+    $(workItem).find("img").toggleClass('imgClick');
+    $(workItem).find(".work-intro, .work-title, .work-descr").toggleClass('clickColor');
+    $(workItem).find(".work-img").toggleClass('clickWorkImg');
+    $(workItem).find(".work-intro").toggleClass('clickWorkIntro');
+    $(workItem).find(".work-intro").toggleClass('removeOpacity', 'addOrRemove');
 }

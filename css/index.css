@@ -41,6 +41,39 @@ body {
 .portfolioLogo {
     text-decoration: none !important;
 }
+/*click portfolio*/
+
+.imgClick{
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    background: #e41919;
+    opacity: .25;
+}
+.clickColor {
+    color: #000;
+    /*color: #fff;*/
+}
+.clickWorkImg {
+    background: rgba(250,250,250, .9);
+}
+.clickWorkIntro {
+    color: #fff;
+    -webkit-transform: translateY(-99px);
+    -moz-transform: translateY(-99px);
+    transform: translateY(-99px);
+    z-index: 3;
+    opacity: 1;
+}
+.removeOpacity {
+    opacity: 0;
+}
+.addOpacity {
+    opacity: 1;
+}
+/*end click portfolio*/
 
 /*end portfolio*/
 
@@ -95,6 +128,18 @@ body {
     border: 1px solid green;
 }
 /*end form*/
+/*porfolio images*/
+/*.work-item:hover .work-img > img*/
+.portImg{
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+.imgBackground{
+}
+/*end porfolio images*/
 
 @media (max-width: 767px) {
     .team-item-image {
