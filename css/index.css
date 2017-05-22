@@ -19,6 +19,9 @@ body {
 .aboutMe{
     color: black;
 }
+.team-item-image img{
+    border: 1px solid black;
+}
 /*start portfolio*/
 .work-item{
     height: 70vh;

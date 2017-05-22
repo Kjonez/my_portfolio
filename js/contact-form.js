@@ -15,21 +15,25 @@ $(document).ready(function(){
         var proceed = true;
         if (user_name == "") {
             $('input[name=name]').css('border-color', '#e41919');
+            $('form-tip').css('color', '#e41919');
             proceed = false;
         }
         if (user_email == "") {
             $('input[name=email]').css('border-color', '#e41919');
+            $('.form-tip').css('color', '#e41919');
             proceed = false;
         }
 
         if (user_message == "") {
             $('textarea[name=message]').css('border-color', '#e41919');
+            $('.form-tip').css('color', '#e41919');
             proceed = false;
         }
         var atpos = user_email.indexOf("@");
         var dotpos = user_email.lastIndexOf(".");
         if (atpos<1 || dotpos<atpos+2 || dotpos+2>=user_email.length) {
             $('input[name=email]').css('border-color', '#e41919');
+            $('.form-tip').css('color', '#e41919');
             proceed = false;
         }
 
@@ -41,7 +45,7 @@ $(document).ready(function(){
                 'userEmail': user_email,
                 'userMessage': user_message
             };
-
+            $('.form-tip').css('color', 'initial');
             //Ajax post data to server
             $.ajax({
                 type: "POST",
