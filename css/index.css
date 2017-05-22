@@ -26,6 +26,9 @@ body {
 .work-item{
     height: 70vh;
 }
+.mfp-image{
+    position: relative;
+}
 .portfolioLi {
     list-style: none;
     margin: auto;
@@ -110,7 +113,7 @@ body {
     color: inherit;
 }
 .works-grid.hide-titles .work-item .work-intro{
-    bottom: -30px;
+    bottom: -77px;
 }
 .logo {
     max-width: 200px;
