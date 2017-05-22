@@ -19,6 +19,9 @@ body {
 .aboutMe{
     color: black;
 }
+.aboutSection {
+    text-align: left;
+}
 .team-item-image img{
     border: 1px solid black;
 }
@@ -103,8 +106,11 @@ body {
     height: 33%;
     width: 35%;
 }
-.page-section {
-    padding-bottom: 140px !important;
+.pb-30 {
+    padding-bottom: 120px;
+}
+.page-section{
+    padding-bottom: 120px;
 }
 .aboutJosh {
     float: left;
@@ -166,6 +172,27 @@ body {
 @media (max-width: 480px) {
     .mb-80 {
          margin-bottom: 20px;
+    }
+    .pb-30 {
+        padding: 20px 0;
+    }
+    .page-section {
+        padding: 20px 0;
+    }
+    .submit_btn {
+        width: 100%;
+    }
+    .form-tip {
+        padding-top: 0px;
+    }
+    .aboutSection {
+        text-align: center;
+    }
+
+}
+@media (max-width: 400px) {
+    .tpl-alt-tabs > li {
+        width: 100px;
     }
 }
 @media (max-width: 350px) {
