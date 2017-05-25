@@ -192,7 +192,7 @@ body {
 }
 @media (max-width: 400px) {
     .tpl-alt-tabs > li {
-        width: 100px;
+        width: 95px;
     }
 }
 @media (max-width: 350px) {
