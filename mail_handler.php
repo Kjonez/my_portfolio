@@ -3,11 +3,9 @@ require_once('email_config.php');
 require('phpmailer/PHPMailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->SMTPDebug = 0;                                 // Enable verbose debug output
-
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-
 $mail->Username = EMAIL_USER;                 // SMTP username
 $mail->Password = EMAIL_PASS;                 // SMTP password
 $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
@@ -27,15 +25,12 @@ $mail->addAddress('joshhuber.dev@gmail.com', 'joshuahuber'); /*your email addres
 $mail->addReplyTo($_POST['email']);/*email address of the person sending the message, so you can reply*/
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
-
 //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
-
 $mail->Subject = $_POST['name'].' PORTFOLIO';
 $mail->Body    = $_POST['message'];
 $mail->AltBody = htmlentities($_POST['message']);
-
 if(!$mail->send()) {
     echo 'Message could not be sent.';
     echo 'Mailer Error: ' . $mail->ErrorInfo;
